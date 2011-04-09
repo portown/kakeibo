@@ -1,0 +1,37 @@
+* kakeibo
+
+** 必要なもの
+
+外部ツールとしてawk, make, gnuplotが必要です。
+Emacsのorg-modeがあると編集が楽になります。
+
+
+** 使い方
+
+orgディレクトリ下に "yyyy_mm.org" の形式で家計簿を作成します。
+（例：2011年4月分の家計簿の場合 2011_04.org）
+家計簿の形式は sample.org を参照してください。
+
+作成後、makeコマンドで様々なデータを見ることができます。
+
+*** make yyyy_mm.rest
+指定した月の残金を確認します。
+
+*** make rest
+現在の月について make yyyy_mm.rest を実行します。
+
+*** make yyyy_mm.graph
+指定した月について、日ごとの残金と、それらを最小二乗法で近似した関数をグラフ化します。
+見終わったらgnuplotのプロセスを殺してください。
+
+*** make graph
+現在の月について、make yyyy_mm.graph を実行します。
+
+*** make yyyy_mm.png
+make yyyy_mm.graph の結果を graph.png に書き出します。
+
+*** make png
+現在の月について、make yyyy_mm.png を実行します。
+
+*** make clean
+make graph によって生成される一時ファイルを削除します。
