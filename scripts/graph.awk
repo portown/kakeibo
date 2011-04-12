@@ -8,19 +8,24 @@
 BEGIN {
   FS = "|";
   day_max = 0;
+  day = 1;
 }
 
 
 /^[^#]/ && NR >= 3 {
   gsub( /[ \t]+/, "");
 
-  if ( day_max < $2 )
-    day_max = $2;
+  if ( $2 != "" ) {
+    day = $2;
+
+    if ( day_max < day )
+      day_max = day;
+  }
 
   if ( $3 == "収入" )
-    day_total[$2] += $5;
+    day_total[day] += $5;
   else if ( $3 == "支出" )
-    day_total[$2] -= $5;
+    day_total[day] -= $5;
 }
 
 

@@ -1,0 +1,4 @@
+2011-04-12  YASUDA Jiro  <portown09@gmail.com>
+
+	* scripts/graph.awk: use the previous day value if the current day value is empty.
+
