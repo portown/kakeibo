@@ -28,6 +28,16 @@ orgディレクトリ下に "yyyy_mm.org" の形式で家計簿を作成しま�
 現在の月について make yyyy_mm.rest を実行します。
 
 
+*** make yyyy_mm.kind
+
+指定した月の、分類別の出費額を表示します。
+
+
+*** make kind
+
+現在の月について make yyyy_mm.kind を実行します。
+
+
 *** make yyyy_mm.graph
 
 指定した月について、日ごとの残金と、それらを最小二乗法で近似した関数をグラフ化します。

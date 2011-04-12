@@ -15,6 +15,9 @@ NOW_DATE = $(shell date +%Y_%m)
 %.rest: org/%.org
 	gawk -f scripts/rest.awk $<
 
+%.kind: org/%.org
+	gawk -f scripts/kind.awk $<
+
 %.graph: org/%.org
 	gawk -f scripts/graph.awk $< > graph.dat
 	gnuplot scripts/graph_wxt.gp
@@ -32,6 +35,9 @@ clean:
 
 .PHONY: rest
 rest: $(NOW_DATE).rest
+
+.PHONY: kind
+kind: $(NOW_DATE).kind
 
 .PHONY: graph
 graph: $(NOW_DATE).graph
