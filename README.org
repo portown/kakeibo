@@ -18,14 +18,14 @@ orgディレクトリ下に "yyyy_mm.org" の形式で家計簿を作成しま�
 
 作成後、makeコマンドで様々なデータを見ることができます。
 
-*** make yyyy_mm.rest
+*** make yyyy_mm.sum
 
-指定した月の残金を確認します。
+指定した月の収入・支出の合計と収支合計、残金を表示します。
 
 
-*** make rest
+*** make sum
 
-現在の月について make yyyy_mm.rest を実行します。
+現在の月について make yyyy_mm.sum を実行します。
 
 
 *** make yyyy_mm.kind

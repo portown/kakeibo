@@ -1,3 +1,18 @@
+2011-04-19  YASUDA Jiro  <portown09@gmail.com>
+
+	* Makefile: rename target 'rest' to 'sum'.
+	(%.sum): rename from 'rest'.
+	use 'gen_money_string.awk'.
+	(%.kind): use 'gen_money_string.awk'.
+
+	* scripts/kind.awk: use 'gen_money_string'.
+
+	* scripts/sum.awk: rename from 'rest.awk'.
+	use 'gen_money_string'.
+
+	* scripts/gen_money_string.awk: new.
+	(gen_money_string): new.
+
 2011-04-12  YASUDA Jiro  <portown09@gmail.com>
 
 	* Makefile: add kind targets.

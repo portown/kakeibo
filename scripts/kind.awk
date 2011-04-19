@@ -13,10 +13,13 @@ BEGIN {
 /^[^#]/ && NR >= 3 {
   gsub( /[ \t]+/, "" );
 
-  if ( $4 == "" )
-    kind = "未分類";
-  else
-    kind = $4;
+  if ( $3 != "繰越" )
+  {
+    if ( $4 == "" )
+      kind = "未分類";
+    else
+      kind = $4;
+  }
 
   if ( $3 == "支出" )
     kind_total[kind] += $5;
@@ -26,7 +29,7 @@ BEGIN {
 END {
   for ( k in kind_total )
   {
-    print k ": " kind_total[k];
+    printf( "%s %s円\n", k ":", gen_money_string( kind_total[k] ) );
   }
 }
 

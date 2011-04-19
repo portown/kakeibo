@@ -27,6 +27,8 @@ BEGIN {
     day_total[day] += $5;
   else if ( $3 == "支出" )
     day_total[day] -= $5;
+  else if ( $3 == "繰越" )
+    day_total[day] += $5;
 }
 
 

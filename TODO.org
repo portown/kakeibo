@@ -1,0 +1,1 @@
+* TODO align the result of the target 'kind'

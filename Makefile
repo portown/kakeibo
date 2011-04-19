@@ -12,11 +12,11 @@ NOW_DATE = $(shell date +%Y_%m)
 
 # Pattern Rules
 
-%.rest: org/%.org
-	gawk -f scripts/rest.awk $<
+%.sum: org/%.org
+	gawk -f scripts/gen_money_string.awk -f scripts/sum.awk $<
 
 %.kind: org/%.org
-	gawk -f scripts/kind.awk $<
+	gawk -f scripts/gen_money_string.awk -f scripts/kind.awk $<
 
 %.graph: org/%.org
 	gawk -f scripts/graph.awk $< > graph.dat
@@ -33,8 +33,8 @@ NOW_DATE = $(shell date +%Y_%m)
 clean:
 	rm -f fit.log graph.dat
 
-.PHONY: rest
-rest: $(NOW_DATE).rest
+.PHONY: sum
+sum: $(NOW_DATE).sum
 
 .PHONY: kind
 kind: $(NOW_DATE).kind
