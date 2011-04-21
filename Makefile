@@ -20,6 +20,7 @@ NOW_DATE = $(shell date +%Y_%m)
 
 %.graph: org/%.org
 	gawk -f scripts/graph.awk $< > graph.dat
+	gawk -f scripts/out.awk $< > out.dat
 	gnuplot scripts/graph_wxt.gp
 
 %.png: org/%.org

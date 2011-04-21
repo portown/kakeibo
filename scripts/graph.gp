@@ -12,15 +12,17 @@ set xrange [1:31]
 set yrange [0:200000]
 
 set output "/dev/null"
-plot 'graph.dat' using 1:2 title "real money" with lines
+plot 'graph.dat' using 1:2 title "rest money" with lines
 
-a=-1000
-b=200000
+a=2000
+b=10000
 f(x)=a*x+b
-fit f(x) 'graph.dat' using 1:2 via a,b
+fit f(x) 'out.dat' using 1:2 via a,b
+
+replot f(x) title "approximate" with lines
 
 set output
-replot f(x) title "approximate" with lines
+replot 'out.dat' using 1:2 title "used money" with lines
 
 
 # EOF

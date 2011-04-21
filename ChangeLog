@@ -1,3 +1,11 @@
+2011-04-22  YASUDA Jiro  <portown09@gmail.com>
+
+	* Makefile (%.graph): use 'out.awk'.
+
+	* scripts/out.awk: new.
+
+	* scripts/graph.gp: plot 'used money'.
+
 2011-04-19  YASUDA Jiro  <portown09@gmail.com>
 
 	* Makefile: rename target 'rest' to 'sum'.
