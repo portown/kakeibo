@@ -16,7 +16,7 @@ NOW_DATE = $(shell date +%Y_%m)
 	gawk -f scripts/gen_money_string.awk -f scripts/sum.awk $<
 
 %.kind: org/%.org
-	gawk -f scripts/gen_money_string.awk -f scripts/kind.awk $<
+	gawk -f scripts/kind.awk $< | sort -n -r | gawk -f scripts/gen_money_string.awk -f scripts/kind_print.awk
 
 %.graph: org/%.org
 	gawk -f scripts/graph.awk $< > graph.dat
@@ -32,7 +32,7 @@ NOW_DATE = $(shell date +%Y_%m)
 
 .PHONY: clean
 clean:
-	rm -f fit.log graph.dat
+	rm -f fit.log graph.dat out.dat
 
 .PHONY: sum
 sum: $(NOW_DATE).sum

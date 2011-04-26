@@ -29,7 +29,7 @@ BEGIN {
 END {
   for ( k in kind_total )
   {
-    printf( "%s %s円\n", k ":", gen_money_string( kind_total[k] ) );
+    printf( "%s %s\n", kind_total[k], k );
   }
 }
 

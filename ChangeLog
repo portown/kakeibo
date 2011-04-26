@@ -1,4 +1,14 @@
+2011-04-27  YASUDA Jiro  <portown09@gmail.com>
+
+	* scripts/kind.awk: modify output format.
+
+	* Makefile (%.kind): use 'sort' and 'kind_print.awk'.
+
+	* scripts/kind_print.awk: new.
+
 2011-04-22  YASUDA Jiro  <portown09@gmail.com>
+
+	* scripts/graph.gp: modify plot format.
 
 	* Makefile (%.graph): use 'out.awk'.
 
@@ -7,8 +17,6 @@
 	* scripts/graph.gp: plot 'used money'.
 
 2011-04-19  YASUDA Jiro  <portown09@gmail.com>
-
-	* scripts/graph.gp: modify plot format.
 
 	* Makefile: rename target 'rest' to 'sum'.
 	(%.sum): rename from 'rest'.
