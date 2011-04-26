@@ -8,6 +8,8 @@
 
 2011-04-19  YASUDA Jiro  <portown09@gmail.com>
 
+	* scripts/graph.gp: modify plot format.
+
 	* Makefile: rename target 'rest' to 'sum'.
 	(%.sum): rename from 'rest'.
 	use 'gen_money_string.awk'.
