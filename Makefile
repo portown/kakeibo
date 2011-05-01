@@ -16,7 +16,11 @@ NOW_DATE = $(shell date +%Y_%m)
 	gawk -f scripts/gen_money_string.awk -f scripts/sum.awk $<
 
 %.kind: org/%.org
+ifeq ($(strip $(KIND)),)
 	gawk -f scripts/kind.awk $< | sort -n -r | gawk -f scripts/gen_money_string.awk -f scripts/kind_print.awk
+else
+	gawk -f scripts/kind.awk $< | grep $(addprefix -e ,$(KIND)) | sort -n -r | gawk -f scripts/gen_money_string.awk -f scripts/kind_print.awk
+endif
 
 %.graph: org/%.org
 	gawk -f scripts/graph.awk $< > graph.dat

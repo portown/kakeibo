@@ -1,5 +1,9 @@
 2011-05-01  YASUDA Jiro  <portown09@gmail.com>
 
+	* Makefile (%.kind): limit kinds if a variable 'KIND' is set.
+
+	* scripts/kind_print.awk: print the sum.
+
 	* scripts/gen_money_string.awk (gen_money_string): fix behavior when zero is passed.
 
 	* org/template.org: new.
