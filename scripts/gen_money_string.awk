@@ -11,6 +11,11 @@ function gen_money_string( money_amount )
   sign = "";
   digit = 0;
 
+  if ( money_amount == 0 )
+  {
+    return "0";
+  }
+
   if ( money_amount < 0 )
   {
     sign = "-";
