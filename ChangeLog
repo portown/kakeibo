@@ -1,3 +1,7 @@
+2011-05-01  YASUDA Jiro  <portown09@gmail.com>
+
+	* org/template.org: new.
+
 2011-04-27  YASUDA Jiro  <portown09@gmail.com>
 
 	* scripts/kind.awk: modify output format.

@@ -1,4 +1,5 @@
-/org/*
+/org/*_*.org
 /fit.log
 /graph.dat
 /graph.png
+/out.dat
