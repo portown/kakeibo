@@ -26,10 +26,10 @@ BEGIN {
 
 
 END {
-  printf( "収入：%10s円\n", gen_money_string( in_total ) );
-  printf( "支出：%10s円\n", gen_money_string( out_total ) );
-  printf( "合計：%10s円\n", gen_money_string( in_total - out_total ) );
-  printf( "残金：%10s円\n", gen_money_string( rest + in_total - out_total ) );
+  printf( "収入: %10s円\n", gen_money_string( in_total ) );
+  printf( "支出: %10s円\n", gen_money_string( out_total ) );
+  printf( "合計: %10s円\n", gen_money_string( in_total - out_total ) );
+  printf( "残金: %10s円\n", gen_money_string( rest + in_total - out_total ) );
 }
 
 
